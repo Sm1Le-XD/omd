@@ -23,7 +23,7 @@ def main():
     most_popular, most_count = counts.most_common(1)[0]
     print("Самый частый запрос:", most_popular)
     print("Его доля от всех поисков:",
-          f"{round(most_count / total, 2) * 100}%")
+          f"{round(most_count / total * 100, 2)}%")
 
     once = [query for query, count in counts.items() if count == 1]
     print("Запросы, встретившиеся один раз:", once)

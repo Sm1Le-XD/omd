@@ -7,7 +7,7 @@ def main():
         {"day": "пт", "orders": 30, "revenue": 48_000, "returns": 3},
     ]
 
-    total_revenue = sum([day["revenue"] for day in days])
+    total_revenue = sum(day["revenue"] for day in days)
     print("Выручка за всю неделю:", total_revenue)
 
     best_day = max(days, key=lambda day: day["revenue"])
